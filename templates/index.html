@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Lighting</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        button { font-size: 24px; padding: 15px 30px; margin: 10px; cursor: pointer; }
+    </style>
+    <script>
+        function setMood(mood) {
+            fetch('/set_mood/' + mood);
+        }
+    </script>
+</head>
+<body>
+    <h1>Select a Mood</h1>
+    <button onclick="setMood('cozy')">Cozy Glow</button>
+    <button onclick="setMood('rainbow')">Rainbow Wave</button>
+</body>
+</html>
